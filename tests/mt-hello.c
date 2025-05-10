@@ -31,9 +31,9 @@ void __main(void) {
   if (mhartid >= n_cores) while (1);
 
   const char* march = get_march(read_csr(marchid));
-  for (size_t i = 0; i < n_cores; i++) {
+  for (size_t i = 1; i < n_cores; i++) {
     if (mhartid == i) {
-      printf("Hello world from core %lu, a %s\n", mhartid, march);
+      printf("Hello world from core %lu %lu, a %s\n", mhartid, i, march);
     }
     barrier();
   }

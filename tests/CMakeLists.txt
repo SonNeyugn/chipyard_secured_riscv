@@ -87,6 +87,15 @@ add_executable(gcd gcd.c)
 add_executable(hello hello.c)
 add_executable(mt-hello mt-hello.c)
 add_executable(symmetric symmetric.c)
+add_executable(addition addition.c)
+add_executable(pmp_napot_RX pmp_napot_RX.c)
+add_executable(pmp_napot_X pmp_napot_X.c)
+add_executable(pmp_tor_RX pmp_tor_RX.c)
+add_executable(pmp_tor_X pmp_tor_X.c)
+add_executable(priv priv.c)
+add_executable(priv_S priv_S.c)
+add_executable(mt_test_0 mt_test_0.c)
+add_executable(mt_test_1 mt_test_1.c)
 
 #################################
 # Disassembly
@@ -125,7 +134,15 @@ add_dump_target(gcd)
 add_dump_target(hello)
 add_dump_target(mt-hello)
 add_dump_target(symmetric)
-
+add_dump_target(addition)
+add_dump_target(pmp_napot_RX)
+add_dump_target(pmp_napot_X)
+add_dump_target(pmp_tor_RX)
+add_dump_target(pmp_tor_X)
+add_dump_target(priv)
+add_dump_target(priv_S)
+add_dump_target(mt_test_0)
+add_dump_target(mt_test_1)
 
 # Add custom command to generate spiflash.img from spiflash.py
 add_custom_command(
