@@ -15,8 +15,9 @@ vlsi.core.lvs_tool: "hammer.lvs.calibre"
 lvs.calibre.version: "2022.2_24.16"
 # VCS options
 vlsi.core.sim_tool: "hammer.sim.vcs"
-sim.vcs.version: "S-2021.09-SP1-1"
-# Voltus options
+# sim.vcs.version: "S-2021.09-SP1-1"
+sim.vcs.version: "N-2017.12-SP2"
+# Voltus options"
 vlsi.core.power_tool: "hammer.power.voltus"
 power.joules.version: "211"
 power.voltus.version: "211_ISR3"

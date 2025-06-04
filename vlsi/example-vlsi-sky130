@@ -3,6 +3,9 @@
 # NOTE: the custom hooks are only used for sky130.
 
 import os
+import sys
+
+sys.path.append("/home/nguyesh/.local/lib/python3.10/site-packages/hammer")
 
 from hammer.vlsi import CLIDriver, HammerTool, HammerToolHookAction
 

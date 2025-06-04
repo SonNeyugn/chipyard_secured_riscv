@@ -17,12 +17,24 @@ endif
 
 ifeq ($(tutorial),sky130-commercial)
     tech_name         ?= sky130
-    CONFIG            ?= TinyRocketConfig
+    CONFIG            ?= RocketConfig
     TOOLS_CONF        ?= example-tools.yml
     TECH_CONF         ?= example-sky130.yml
-    DESIGN_CONFS      ?= example-designs/sky130-commercial.yml \
-                        $(if $(filter $(VLSI_TOP),Rocket), \
-                            example-designs/sky130-rocket.yml, )
+    DESIGN_CONFS      ?= example-design.yml
+                        # $(if $(filter $(VLSI_TOP),Rocket), \
+                        #     example-designs/sky130-rocket.yml, )
+    VLSI_OBJ_DIR      ?= build-sky130-commercial
+    INPUT_CONFS       ?= $(TOOLS_CONF) $(TECH_CONF) $(DESIGN_CONFS) $(EXTRA_CONFS)
+endif
+
+ifeq ($(tutorial),sky130-commercial-quad)
+    tech_name         ?= sky130
+    CONFIG            ?= QuadRocketConfig
+    TOOLS_CONF        ?= example-tools.yml
+    TECH_CONF         ?= example-sky130.yml
+    DESIGN_CONFS      ?= example-design.yml
+                        # $(if $(filter $(VLSI_TOP),Rocket), \
+                        #     example-designs/sky130-rocket.yml, )
     VLSI_OBJ_DIR      ?= build-sky130-commercial
     INPUT_CONFS       ?= $(TOOLS_CONF) $(TECH_CONF) $(DESIGN_CONFS) $(EXTRA_CONFS)
 endif
